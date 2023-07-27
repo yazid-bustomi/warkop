@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('harga');
-            $table->integer('harga');
-            $table->foreignId('toko_id')->references('id')->on('tokos');
+            $table->foreignId('toko_id')->constrained();
             $table->timestamps();
         });
     }
