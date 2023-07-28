@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('harga');
-            $table->integer('harga');
+            $table->integer('price');
             $table->foreignId('toko_id')->references('id')->on('tokos');
             $table->timestamps();
         });
