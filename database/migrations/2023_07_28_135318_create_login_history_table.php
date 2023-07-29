@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('login_history', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('harga');
-            $table->integer('harga');
-            $table->foreignId('toko_id')->references('id')->on('tokos');
             $table->timestamps();
         });
     }
@@ -26,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('login_history');
     }
 };
