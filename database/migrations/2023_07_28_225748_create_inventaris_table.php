@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('qty');
-            $table->string('keterangan');
             $table->foreignId('toko_id')->references('id')->on('tokos');
             $table->timestamps();
         });

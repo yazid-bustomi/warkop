@@ -6,6 +6,8 @@ use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 
+use function PHPUnit\Framework\returnSelf;
+
 class ProductController extends Controller
 {
     /**
@@ -13,7 +15,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        // menampilkan data product
+        return view('admin.index');
     }
 
     /**

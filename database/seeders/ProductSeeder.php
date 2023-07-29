@@ -16,12 +16,6 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('users')->insert([
-            'name' => 'tomi',
-            'email' => 'tomi@gmail.com',
-            'password' => Hash::make('password'),
-        ]);
-
         Product::create([
             'name' => 'kopi sachet',
             'price' => '5000',
