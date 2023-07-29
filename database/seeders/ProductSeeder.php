@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Product;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -21,6 +22,21 @@ class ProductSeeder extends Seeder
             'password' => Hash::make('password'),
         ]);
 
+        Product::create([
+            'name' => 'kopi sachet',
+            'price' => '5000',
+            'toko_id' => '1'
+        ]);
         
+        Product::create([
+            'name' => 'kopi sachet + es',
+            'price' => '6000',
+            'toko_id' => '1'
+        ]);
+        Product::create([
+            'name' => 'nutrisari',
+            'price' => '3000',
+            'toko_id' => '1'
+        ]);
     }
 }
