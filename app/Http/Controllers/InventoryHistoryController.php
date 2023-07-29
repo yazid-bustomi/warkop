@@ -2,21 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
-use App\Http\Requests\StoreProductRequest;
-use App\Http\Requests\UpdateProductRequest;
+use App\Models\Inventory_history;
+use App\Http\Requests\StoreInventory_historyRequest;
+use App\Http\Requests\UpdateInventory_historyRequest;
 
-use function PHPUnit\Framework\returnSelf;
-
-class ProductController extends Controller
+class InventoryHistoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        // menampilkan data product
-        return view('admin.index');
+        //
     }
 
     /**
@@ -30,7 +27,7 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreProductRequest $request)
+    public function store(StoreInventory_historyRequest $request)
     {
         //
     }
@@ -38,7 +35,7 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Product $product)
+    public function show(Inventory_history $inventory_history)
     {
         //
     }
@@ -46,7 +43,7 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Product $product)
+    public function edit(Inventory_history $inventory_history)
     {
         //
     }
@@ -54,7 +51,7 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateProductRequest $request, Product $product)
+    public function update(UpdateInventory_historyRequest $request, Inventory_history $inventory_history)
     {
         //
     }
@@ -62,7 +59,7 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Product $product)
+    public function destroy(Inventory_history $inventory_history)
     {
         //
     }
