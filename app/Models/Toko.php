@@ -16,4 +16,8 @@ class Toko extends Model
     public function Inventaris(){
         return $this->hasMany(Inventaris::class);
     }
+
+    public function User() {
+        return $this->hasMany(User::class);
+    }
 }
