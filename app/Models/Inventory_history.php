@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Inventory_history extends Model
 {
     use HasFactory;
+
+    public function Inventaris(){
+        return $this->belongsTo(Inventaris::class, 'inv_id');
+    }
 }

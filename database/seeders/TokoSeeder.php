@@ -22,7 +22,10 @@ class TokoSeeder extends Seeder
 
         DB::table('users')->insert([
             'name' => 'tomi',
+            'username' => 'tomi',
             'email' => 'tomi@gmail.com',
+            'role' => 'admin',
+            'phone' => '085850058',
             'password' => Hash::make('password'),
             'toko_id' => '1'
         ]);
