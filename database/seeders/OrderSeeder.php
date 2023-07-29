@@ -17,5 +17,10 @@ class OrderSeeder extends Seeder
             'user_id' => '1',
             'total_harga' => '20000'
         ]);
+
+        Order::create([
+            'user_id' => '2',
+            'total_harga' => '15000'
+        ]);
     }
 }

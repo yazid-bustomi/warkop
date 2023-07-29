@@ -42,5 +42,23 @@ class ProductSeeder extends Seeder
             'price' => '1000',
             'toko_id' => '1'
         ]);
+
+        Product::create([
+            'name' => 'mie kuah',
+            'price' => '6000',
+            'toko_id' => '2'
+        ]);
+
+        Product::create([
+            'name' => 'mie + telor',
+            'price' => '8000',
+            'toko_id' => '2'
+        ]);
+
+        Product::create([
+            'name' => 'nasi bungkus',
+            'price' => '7000',
+            'toko_id' => '2'
+        ]);
     }
 }

@@ -31,5 +31,11 @@ class OrderDetailSeeder extends Seeder
             'harga' => '5000',
             'qty' => '5'
         ]);
+        OrderDetail::create([
+            'order_id' => '2',
+            'product_id' => '3',
+            'harga' => '10000',
+            'qty' => '2'
+        ]);
     }
 }
