@@ -16,7 +16,9 @@ class DatabaseSeeder extends Seeder
             TokoSeeder::class,
             ProductSeeder::class,
             InventarisSeeder::class,
-            InventoryHistorySeeder::class
+            InventoryHistorySeeder::class,
+            OrderSeeder::class,
+            OrderDetailSeeder::class
         ]);
     }
 }
