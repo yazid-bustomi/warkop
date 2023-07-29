@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Inventory_history extends Model
 {
     use HasFactory;
 
-    public function Toko(){
-        return $this->belongsTo(Toko::class, 'toko_id');
+    public function Inventaris(){
+        return $this->belongsTo(Inventaris::class, 'inv_id');
     }
 }

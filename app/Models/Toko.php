@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Toko extends Model
 {
     use HasFactory;
+
+    public function Product(){
+        return $this->hasMany(Product::class);
+    }
+
+    public function Inventaris(){
+        return $this->hasMany(Inventaris::class);
+    }
+
+    public function User() {
+        return $this->hasMany(User::class);
+    }
 }
