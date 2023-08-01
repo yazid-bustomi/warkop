@@ -31,7 +31,7 @@ class InventarisSeeder extends Seeder
         Inventaris::create([
             'name' => 'lampu',
             'qty' => '24',
-            'toko_id' => '1'
+            'toko_id' => '2'
         ]);
     }
 }

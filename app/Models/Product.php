@@ -12,4 +12,5 @@ class Product extends Model
     public function Toko(){
         return $this->belongsTo(Toko::class, 'toko_id');
     }
+    
 }
