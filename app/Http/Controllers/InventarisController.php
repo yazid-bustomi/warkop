@@ -2,21 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
-use App\Http\Requests\StoreProductRequest;
-use App\Http\Requests\UpdateProductRequest;
+use App\Models\Inventaris;
+use App\Http\Requests\StoreInventarisRequest;
+use App\Http\Requests\UpdateInventarisRequest;
 
-use function PHPUnit\Framework\returnSelf;
-
-class ProductController extends Controller
+class InventarisController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        // menampilkan data product
-        return view('admin.index');
+        //
     }
 
     /**
@@ -30,7 +27,7 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreProductRequest $request)
+    public function store(StoreInventarisRequest $request)
     {
         //
     }
@@ -38,7 +35,7 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Product $product)
+    public function show(Inventaris $inventaris)
     {
         //
     }
@@ -46,7 +43,7 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Product $product)
+    public function edit(Inventaris $inventaris)
     {
         //
     }
@@ -54,7 +51,7 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateProductRequest $request, Product $product)
+    public function update(UpdateInventarisRequest $request, Inventaris $inventaris)
     {
         //
     }
@@ -62,7 +59,7 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Product $product)
+    public function destroy(Inventaris $inventaris)
     {
         //
     }

@@ -18,11 +18,11 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'username',
-        'password',
+
+    protected $guarded = [
+        'id',
     ];
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -43,4 +43,8 @@ class User extends Authenticatable
         //'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function Toko(){
+        return $this->belongsTo(Toko::class, 'toko_id');
+    }
 }
