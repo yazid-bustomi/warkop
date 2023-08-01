@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Http\Requests\StoreOrderRequest;
 use App\Http\Requests\UpdateOrderRequest;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -13,7 +14,20 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        // mendefinikan user
+        $userId = Auth::user()->id;
+
+        // mencari data dari relasi OrderDetail di dalam model order dan relasi product pada model OrderDetail dan yang sesuai id nya
+        $orders = Order::with(['OrderDetail', 'OrderDetail.Product'])->where('user_id', $userId)->get();
+
+        return view('order.index', compact('orders'));
+        
+        // return $orders;
+
+        // foreach($orders as $order){
+            // $data = $order->OrderDetail;
+        // };
+        // return $data->nama;
     }
 
     /**
@@ -21,7 +35,8 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        $user = Auth::user()->id;
+        return view('order.create', compact('user'));
     }
 
     /**

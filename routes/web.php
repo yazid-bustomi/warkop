@@ -1,12 +1,18 @@
 <?php
 
-use App\Http\Controllers\MenuController;
+use App\Http\Controllers\InventarisController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+
+use App\Http\Controllers\MenuController;
+
 use App\Http\Controllers\ProfileController;
-
-
+use App\Models\Inventaris;
+use Database\Factories\ProductFactory;
+use Illuminate\Routing\Route as RoutingRoute;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,8 +38,29 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
 });
+
+Route::middleware(['auth'])->group(function () {
+    //product 
+    Route::get('/admin/product', [ProductController::class, 'index'])->name('admin.product.index');
+    Route::get('/admin/product/create', [ProductController::class, 'create'])->name('admin.product.create');
+    Route::post('/admin/product/store', [ProductController::class, 'store'])->name('admin.product.store');
+    Route::get('/admin/product/store/{id}', [ProductController::class, 'show'])->name('admin.product.show');
+
+    // Inventaris
+    Route::get('/admin/inv', [InventarisController::class, 'index'])->name('admin.inv.index');
+    Route::get('/admin/inv/create', [InventarisController::class, 'create'])->name('admin.inv.create');
+});
+
+Route::middleware('auth')->group(function (){
+    Route::get('/order', [OrderController::class, 'index'])->name('order.index');
+    Route::get('/order/create', [OrderController::class, 'create'])->name('order.create');
+    Route::get('/order/storde', [OrderController::class, 'store'])->name('order.store');
+});
+
+
+
 Route::resource('menu',MenuController::class);
+
 require __DIR__.'/auth.php';
 
