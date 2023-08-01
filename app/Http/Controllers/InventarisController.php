@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Inventaris;
 use App\Http\Requests\StoreInventarisRequest;
 use App\Http\Requests\UpdateInventarisRequest;
+use App\Models\Inventaris;
+use Illuminate\Support\Facades\Auth;
 
 class InventarisController extends Controller
 {
@@ -13,7 +14,14 @@ class InventarisController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();        
+        
+        // Ambil data inventaris sesuai dengan ID toko tertentu.
+        $inventaris = Inventaris::with('Inventory_history')->where('toko_id', $user->toko_id)->get();
+
+        return $inventaris;
+        
+        return view('admin.inventaris.index');
     }
 
     /**
@@ -21,7 +29,7 @@ class InventarisController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**

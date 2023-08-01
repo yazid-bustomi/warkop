@@ -15,4 +15,7 @@ class Inventaris extends Model
     public function Inventory_history(){
         return $this->hasMany(Inventory_history::class);
     }
+    public function User() {
+        return $this->hasMany(User::class);
+    }
 }

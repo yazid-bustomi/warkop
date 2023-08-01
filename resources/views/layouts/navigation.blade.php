@@ -26,6 +26,11 @@
                         {{ __('Order') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('admin.inv.index')" :active="request()->routeIs('admin.inv.index')">
+                        {{ __('Inventaris') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
