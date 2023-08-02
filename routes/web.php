@@ -50,6 +50,7 @@ Route::middleware(['auth'])->group(function () {
     // Inventaris
     Route::get('/admin/inv', [InventarisController::class, 'index'])->name('admin.inv.index');
     Route::get('/admin/inv/create', [InventarisController::class, 'create'])->name('admin.inv.create');
+    Route::post('/admin/inv/store', [InventarisController::class, 'store'])->name('admin.inv.store');
 });
 
 Route::middleware('auth')->group(function (){

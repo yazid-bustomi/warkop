@@ -23,5 +23,10 @@ class InventoryHistorySeeder extends Seeder
             'status' => 'bagus',
             'keterangan' => 'masih di pakai ',
         ]);
+        Inventory_history::create([
+            'inv_id' => '3',
+            'status' => 'bagus',
+            'keterangan' => 'masih di pakai ',
+        ]);
     }
 }

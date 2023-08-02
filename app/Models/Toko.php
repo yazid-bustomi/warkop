@@ -9,15 +9,23 @@ class Toko extends Model
 {
     use HasFactory;
 
-    public function Product(){
+    public function Product()
+    {
         return $this->hasMany(Product::class);
     }
 
-    public function Inventaris(){
+    public function Inventaris()
+    {
         return $this->hasMany(Inventaris::class);
     }
 
-    public function User() {
+    public function User()
+    {
         return $this->hasMany(User::class);
+    }
+    
+    public function inventoryHistory()
+    {
+        return $this->hasMany(Inventory_history::class);
     }
 }
