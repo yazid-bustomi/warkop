@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+
+use App\Http\Controllers\MenuController;
+
 use App\Http\Controllers\ProfileController;
 use App\Models\Inventaris;
 use Database\Factories\ProductFactory;
@@ -55,6 +58,10 @@ Route::middleware('auth')->group(function (){
     Route::get('/order/create', [OrderController::class, 'create'])->name('order.create');
     Route::get('/order/storde', [OrderController::class, 'store'])->name('order.store');
 });
+
+
+
+Route::resource('menu',MenuController::class);
 
 require __DIR__.'/auth.php';
 
