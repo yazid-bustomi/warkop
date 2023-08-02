@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
-
-use function PHPUnit\Framework\returnSelf;
+use App\Models\Product;
+use App\Models\Toko;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -15,8 +15,16 @@ class ProductController extends Controller
      */
     public function index()
     {
-        // menampilkan data product
-        return view('admin.index');
+        // Inisialisasi user dari id nya yang login
+        $userID = Auth::user()->id;
+
+        // memfilter data dari user id yang login dan mengambil data yang pertama ketemu
+        $toko = Toko::whereHas('user', function ($query) use ($userID) {
+            $query->where('id', $userID);
+        })->with(['User', 'Product', 'Inventaris'])->first();
+
+        // return $toko->id;
+        return view('admin.product.index', compact('toko'));
     }
 
     /**
@@ -24,7 +32,16 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        // Inisialisasi user dari id nya yang login
+        $userID = Auth::user()->id;
+
+        // memfilter data dari user id yang login dan mengambil data yang pertama ketemu
+        $toko = Toko::whereHas('user', function ($query) use ($userID) {
+            $query->where('id', $userID);
+        })->with(['User', 'Product', 'Inventaris'])->first();
+
+        // mengirimkan data user dan data toko untuk di eksekusi ke store
+        return view('admin.product.create', compact('toko'));
     }
 
     /**
@@ -32,7 +49,20 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        //
+        $validate = $request->validate([
+            'name' => 'min:1',
+            'price' => 'min:4'
+        ]);
+
+        $product = Product::all();
+
+        $product = new Product();
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->toko_id = $request->toko_id;
+        $product->save();
+
+        return redirect(route('admin.product.index'));
     }
 
     /**

@@ -12,7 +12,11 @@ class Inventaris extends Model
     public function Toko(){
         return $this->belongsTo(Toko::class, 'toko_id');
     }
-    public function Inventory_history(){
-        return $this->hasMany(Inventory_history::class);
+    public function InventoryHistory(){
+        return $this->hasMany(Inventory_history::class, 'inv_id');
     }
+    public function User() {
+        return $this->hasMany(User::class);
+    }
+    
 }
