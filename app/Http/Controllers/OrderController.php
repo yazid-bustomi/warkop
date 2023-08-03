@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Http\Requests\StoreOrderRequest;
 use App\Http\Requests\UpdateOrderRequest;
+use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
@@ -36,7 +37,12 @@ class OrderController extends Controller
     public function create()
     {
         $user = Auth::user()->id;
-        return view('order.create', compact('user'));
+
+        // buat menampilkan data sesuai toko id nya
+        $tokoId = Auth::user()->toko_id;
+        $dataToko = Product::where('toko_id', $tokoId)->get();
+
+        return view('order.create', compact('user', 'dataToko'));
     }
 
     /**
