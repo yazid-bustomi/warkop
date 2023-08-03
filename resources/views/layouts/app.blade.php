@@ -182,7 +182,7 @@
               </button>
 
               <span class="page-title">
-                nama halaman yang sedang aktif
+                nama halaman yang sedanng aktif
               </span>
               <div class="navbar-right ">
 
