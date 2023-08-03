@@ -6,7 +6,7 @@
                 <div class="p-6 text-gray-900">
                     <div class="card">
                         <div class="card-body ">
-                            <div class="row justify-content-between">
+                            <div class="row justify-content-between mr-5 ml-3">
 
                                 <div class="div h3">Product</div>
                                 <a href="{{ route('admin.product.create') }}" class="btn btn-primary mb-3 float-right">Tambah

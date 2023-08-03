@@ -111,9 +111,9 @@
                           </a>
                       </li>
 
-                      <li class="has-sub active expand">
+                      <li class="has-sub expand">
                         <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                            data-target="#users" aria-expanded="false" aria-controls="users">
+                            data-target="#users"  aria-controls="users">
                             <i class="mdi mdi-image-filter-none"></i>
                             <span class="nav-text">Inventaris</span> <b class="caret"></b>
                         </a>
@@ -148,7 +148,7 @@
 
 
 
-                        <li class="has-sub active expand">
+                        {{-- <li class="has-sub expand">
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#users" aria-expanded="false" aria-controls="users">
                                 <i class="mdi mdi-image-filter-none"></i>
@@ -193,7 +193,7 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
 
                 <div class="sidebar-footer">
                     <div class="sidebar-footer-content">
