@@ -61,13 +61,83 @@
 
 @extends('layouts/app')
 @section('konten')
+
+<!-- Column Sizing -->
+<div class="card card-default">
+  <div class="card-header">
+    <h2>Pemesanan</h2>
+    {{-- <a class="btn mdi mdi-code-tags" data-toggle="collapse" href="#collapse-colum-sizing" role="button"
+      aria-expanded="false" aria-controls="collapse-colum-sizing"> </a>
+ --}}
+
+  </div>
+  <div class="card-body">
+    {{-- <div class="collapse" id="collapse-colum-sizing">
+      <pre class="language-html mb-4">
+<code >
+&lt;form&gt;
+&lt;div class="form-row"&gt;
+&lt;div class="col-6"&gt;
+  &lt;input type="text" class="form-control" placeholder="col-6"&gt;
+&lt;/div&gt;
+&lt;div class="col-3"&gt;
+  &lt;input type="text" class="form-control" placeholder="col-3"&gt;
+&lt;/div&gt;
+&lt;div class="col-3"&gt;
+  &lt;input type="text" class="form-control" placeholder="col-3"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+
+</code>
+      </pre>
+    </div> --}}
+    <form>
+      <div class="form-row">
+          <div class="col-2">
+                <select class="form-control rounded-0 bg-light" id="exampleFormControlSelect16">
+                  <option>Rawon</option>
+                  <option>Pecel</option>
+                  <option>Sop Buntut</option>
+                  <option>Gudeg</option>
+                  <option>Rendang</option>
+                </select>
+          </div>
+        <div class="col-1">
+          <input type="number" class="form-control">
+        </div>
+        <div class="col-3">
+          <button type="submit" class="btn btn-secondary btn-pill">Submit</button>
+        </div>
+        <div class="col-2">
+          <select class="form-control rounded-0 bg-light" id="exampleFormControlSelect16">
+            <option>Est Teh</option>
+            <option>Est Jeruk</option>
+            <option>Est Gud Day</option>
+            <option>Tea Anget</option>
+            <option>Kopi</option>
+          </select>
+    </div>
+  <div class="col-1">
+    <input type="number" class="form-control">
+  </div>
+  <div class="col-3">
+    <button type="submit" class="btn btn-secondary btn-pill">Submit</button>
+  </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+
      <!-- Table Product -->
 <div class="row">
   <div class="col-12">
     <div class="card card-default">
       <div class="card-header">
-        <h2>Products Inventory</h2>
-        <div class="dropdown">
+        <h2>Riwayat Pemesanan</h2>
+        {{-- <div class="dropdown">
           <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false"> Yearly Chart
           </a>
@@ -77,7 +147,7 @@
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
-        </div>
+        </div> --}}
       </div>
       <div class="card-body">
         <table id="productsTable" class="table table-hover table-product" style="width:100%">

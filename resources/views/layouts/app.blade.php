@@ -71,9 +71,9 @@
           <div id="sidebar" class="sidebar sidebar-with-footer">
             <!-- Aplication Brand -->
             <div class="app-brand">
-              <a href="/index.html">
+              <a href={{url('/dashboard')}}>
                 <img src="/assets/images/logo.png" alt="Mono">
-                <span class="brand-name">MONO</span>
+                <span class="brand-name">GIRAS27</span>
               </a>
             </div>
             <!-- begin sidebar scrollbar -->
@@ -83,8 +83,7 @@
                 
 
                 
-                  <li
-                   >
+                  <li>
                     <a class="sidenav-item-link" href={{url('dashboard')}}>
                       <i class="mdi mdi-briefcase-account-outline"></i>
                       <span class="nav-text">Dashboard</span>
@@ -95,11 +94,10 @@
                 
 
                 
-                  <li
-                   >
+                  <li>
                     <a class="sidenav-item-link" href={{url('order')}}>
                       <i class="mdi mdi-chart-line"></i>
-                      <span class="nav-text">Menu</span>
+                      <span class="nav-text">Order</span>
                     </a>
                   </li>
                 
@@ -109,7 +107,7 @@
                 
                   
                   <li class="section-title">
-                    Pages
+                    Halaman
                   </li>
                 
 
@@ -120,7 +118,7 @@
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#users"
                       aria-expanded="false" aria-controls="users">
                       <i class="mdi mdi-image-filter-none"></i>
-                      <span class="nav-text">Siswa</span> <b class="caret"></b>
+                      <span class="nav-text">Master</span> <b class="caret"></b>
                     </a>
                     <ul  class="collapse show"  id="users"
                       data-parent="#sidebar-menu">
@@ -128,36 +126,25 @@
                         
                         
                           
-                            <li  class="active" >
-                              <a class="sidenav-item-link" href={{url("/admin/product")}}>
-                                <span class="nav-text">Product</span>
-                                
-                              </a>
-                            </li>
-                          
-                        
-
-                        
-                        
-                          
                             <li >
-                              <a class="sidenav-item-link" href={{url('tabel-siswa')}}>
-                                <span class="nav-text">Tabel Data Siswa</span>
-                                
+                              <a class="sidenav-item-link" href={{url('admin/inv/create')}}>
+                                <span class="nav-text">Inventory</span>
                               </a>
                             </li>
                           
                         
-
-                        
-                        
-                          
                             <li >
                               <a class="sidenav-item-link" href="#">
-                                <span class="nav-text">Ubah Data Siswa</span>
-                                
+                                <span class="nav-text">Product</span>
                               </a>
                             </li>
+
+                            <li  class="active" >
+                              <a class="sidenav-item-link" href={{url("/admin/product")}}>
+                                <span class="nav-text">Super User</span>
+                              </a>
+                            </li>
+                          
                       </div>
                     </ul>
                   </li>
@@ -194,8 +181,9 @@
                 <span class="sr-only">Toggle navigation</span>
               </button>
 
-              <span class="page-title"></span>
-
+              <span class="page-title">
+                Null
+              </span>
               <div class="navbar-right ">
 
                 <!-- search form -->
