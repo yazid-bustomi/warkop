@@ -111,6 +111,30 @@
                           </a>
                       </li>
 
+                      <li class="has-sub active expand">
+                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                            data-target="#users" aria-expanded="false" aria-controls="users">
+                            <i class="mdi mdi-image-filter-none"></i>
+                            <span class="nav-text">Inventaris</span> <b class="caret"></b>
+                        </a>
+                        <ul class="collapse show" id="users" data-parent="#sidebar-menu">
+                            <div class="sub-menu">
+                                <li>
+                                    <a class="sidenav-item-link" href={{ route('admin.inv.index') }}>
+                                        <span class="nav-text">Inventaris</span>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="sidenav-item-link" href="{{ route('admin.inv.create') }}">
+                                        <span class="nav-text">Tambah Inventaris</span>
+
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+
 
 
 
