@@ -10,28 +10,13 @@
     <form method="POST" action="{{ route('order.store') }}">
         @csrf
 
-        {{-- Belum Selesai, cuman bisa nampil saja datanya --}}
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Nama Product')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
-         <!-- Name -->
-         <div class="mt-4">
-            <x-input-label for="price" :value="__('Harga')" />
-            <x-text-input id="price" class="block mt-1 w-full" type="number" name="price" required />
-            <x-input-error :messages="$errors->get('price')" class="mt-2" />
-        </div>
-
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-text-input id="user_id" value="{{ $user }}" hidden type="number" name="user_id" required />
-        </div>
-
-            <x-primary-button class="ml-4">
-                {{ __('Tambah') }}
-            </x-primary-button>
-        </div>
+        <h2>Pilih Data:</h2>
+        <select name="selected_data[]" multiple>
+            @foreach ($dataToko as $item)
+                <option value="{{ $item->id }}">{{ $item->name }} - Harga: {{ $item->price }}</option>
+            @endforeach
+            <input type="number" hidden value="{{ $user }}" name="user_id">
+        </select>
+        <button type="submit">Kirim</button>
     </form>
 </x-app-layout>
