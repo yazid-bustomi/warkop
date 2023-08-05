@@ -66,68 +66,57 @@
 <div class="card card-default">
   <div class="card-header">
     <h2>Pemesanan</h2>
-    {{-- <a class="btn mdi mdi-code-tags" data-toggle="collapse" href="#collapse-colum-sizing" role="button"
-      aria-expanded="false" aria-controls="collapse-colum-sizing"> </a>
- --}}
-
   </div>
   <div class="card-body">
-    {{-- <div class="collapse" id="collapse-colum-sizing">
-      <pre class="language-html mb-4">
-<code >
-&lt;form&gt;
-&lt;div class="form-row"&gt;
-&lt;div class="col-6"&gt;
-  &lt;input type="text" class="form-control" placeholder="col-6"&gt;
-&lt;/div&gt;
-&lt;div class="col-3"&gt;
-  &lt;input type="text" class="form-control" placeholder="col-3"&gt;
-&lt;/div&gt;
-&lt;div class="col-3"&gt;
-  &lt;input type="text" class="form-control" placeholder="col-3"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/form&gt;
-
-</code>
-      </pre>
-    </div> --}}
     <form>
-      <div class="form-row">
-          <div class="col-2">
-                <select class="form-control rounded-0 bg-light" id="exampleFormControlSelect16">
-                  <option>Rawon</option>
-                  <option>Pecel</option>
-                  <option>Sop Buntut</option>
-                  <option>Gudeg</option>
-                  <option>Rendang</option>
-                </select>
+      <div class="form-group">
+        <h5>Makanan</h5>
+        <div class="form-row align-items-center">
+          <div class="col-3">
+            <label for="makanan">Pilih Makanan:</label>
+            <select class="form-control rounded-0 bg-light" id="makanan">
+              <option>Rawon</option>
+              <option>Pecel</option>
+              <option>Sop Buntut</option>
+              <option>Gudeg</option>
+              <option>Rendang</option>
+            </select>
           </div>
-        <div class="col-1">
-          <input type="number" class="form-control">
+          <div class="col-1">
+            <label for="jumlah_makanan">Jumlah:</label>
+            <input type="number" class="form-control" id="jumlah_makanan">
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-secondary btn-pill mt-6">Tambahkan</button>
+          </div>
         </div>
-        <div class="col-3">
-          <button type="submit" class="btn btn-secondary btn-pill">Submit</button>
+      </div>
+  
+      <div class="form-group">
+        <h5>Minuman</h5>
+        <div class="form-row align-items-center">
+          <div class="col-3">
+            <label for="minuman">Pilih Minuman:</label>
+            <select class="form-control rounded-0 bg-light" id="minuman">
+              <option>Es Teh</option>
+              <option>Es Jeruk</option>
+              <option>Es Gud Day</option>
+              <option>Teh Anget</option>
+              <option>Kopi</option>
+            </select>
+          </div>
+          <div class="col-1">
+            <label for="jumlah_minuman">Jumlah:</label>
+            <input type="number" class="form-control" id="jumlah_minuman">
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-secondary btn-pill mt-6">Tambahkan</button>
+          </div>
         </div>
-        <div class="col-2">
-          <select class="form-control rounded-0 bg-light" id="exampleFormControlSelect16">
-            <option>Est Teh</option>
-            <option>Est Jeruk</option>
-            <option>Est Gud Day</option>
-            <option>Tea Anget</option>
-            <option>Kopi</option>
-          </select>
-    </div>
-  <div class="col-1">
-    <input type="number" class="form-control">
-  </div>
-  <div class="col-3">
-    <button type="submit" class="btn btn-secondary btn-pill">Submit</button>
-  </div>
       </div>
     </form>
-
   </div>
+  
 </div>
 
 
@@ -137,17 +126,6 @@
     <div class="card card-default">
       <div class="card-header">
         <h2>Riwayat Pemesanan</h2>
-        {{-- <div class="dropdown">
-          <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false"> Yearly Chart
-          </a>
-
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </div> --}}
       </div>
       <div class="card-body">
         <table id="productsTable" class="table table-hover table-product" style="width:100%">
