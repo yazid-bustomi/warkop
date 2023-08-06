@@ -30,8 +30,8 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    return view('index');
+})->middleware(['auth', 'verified'])->name('index');
 
 
 Route::middleware('auth')->group(function () {
