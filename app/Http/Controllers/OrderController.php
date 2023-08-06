@@ -20,10 +20,10 @@ class OrderController extends Controller
 
         // mencari data dari relasi OrderDetail di dalam model order dan relasi product pada model OrderDetail dan yang sesuai id nya
         $orders = Order::with(['OrderDetail', 'OrderDetail.Product'])->where('user_id', $userId)->get();
+        // return $orders;
 
         return view('order.index', compact('orders'));
         
-        // return $orders;
 
         // foreach($orders as $order){
             // $data = $order->OrderDetail;
