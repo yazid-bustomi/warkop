@@ -71,12 +71,26 @@
           ——— LEFT SIDEBAR WITH OUT FOOTER
         ===================================== -->
         <aside class="left-sidebar sidebar-dark" id="left-sidebar">
-            <div id="sidebar" class="sidebar sidebar-with-footer">
-                <!-- Aplication Brand -->
-                <div class="app-brand">
-                    <a href="/index.html">
-                        <img src="/assets/images/logo.png" alt="Mono">
-                        <span class="brand-name">MONO</span>
+          <div id="sidebar" class="sidebar sidebar-with-footer">
+            <!-- Aplication Brand -->
+            <div class="app-brand">
+              <a href={{url('/dashboard')}}>
+                <img src="/assets/images/logo.png" alt="Mono">
+                <span class="brand-name">GIRAS27</span>
+              </a>
+            </div>
+            <!-- begin sidebar scrollbar -->
+            <div class="sidebar-left" data-simplebar style="height: 100%;">
+              <!-- sidebar menu -->
+              <ul class="nav sidebar-inner" id="sidebar-menu">
+                
+
+                
+                  <li>
+                    <a class="sidenav-item-link" href={{url('dashboard')}}>
+                      <i class="mdi mdi-briefcase-account-outline"></i>
+                      <span class="nav-text">Dashboard</span>
+
                     </a>
                 </div>
                 <!-- begin sidebar scrollbar -->
@@ -84,6 +98,63 @@
                     <!-- sidebar menu -->
                     <ul class="nav sidebar-inner" id="sidebar-menu">
 
+       
+                  <li>
+                    <a class="sidenav-item-link" href={{url('order')}}>
+                      <i class="mdi mdi-chart-line"></i>
+                      <span class="nav-text">Order</span>
+                    </a>
+                  </li>
+                
+
+                
+
+                
+                  
+                  <li class="section-title">
+                    Halaman
+                  </li>
+                
+
+                
+
+                
+                  <li  class="has-sub active expand" >
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#users"
+                      aria-expanded="false" aria-controls="users">
+                      <i class="mdi mdi-image-filter-none"></i>
+                      <span class="nav-text">Master</span> <b class="caret"></b>
+                    </a>
+                    <ul  class="collapse show"  id="users"
+                      data-parent="#sidebar-menu">
+                      <div class="sub-menu">
+                        
+                        
+                          
+                            <li >
+                              <a class="sidenav-item-link" href={{url('admin/inv/create')}}>
+                                <span class="nav-text">Inventory</span>
+                              </a>
+                            </li>
+                          
+                        
+                            <li >
+                              <a class="sidenav-item-link" href="#">
+                                <span class="nav-text">Product</span>
+                              </a>
+                            </li>
+
+                            <li  class="active" >
+                              <a class="sidenav-item-link" href={{url("/admin/product")}}>
+                                <span class="nav-text">Super User</span>
+                              </a>
+                            </li>
+                          
+                      </div>
+                    </ul>
+                  </li>
+              </ul>
+            </div>
 
 
                         <li>
@@ -93,6 +164,36 @@
                             </a>
                         </li>
 
+      <!-- ====================================
+      ——— PAGE WRAPPER
+      
+      ===================================== -->
+      <div class="page-wrapper">
+        
+          <!-- Header -->
+          <header class="main-header" id="header">
+            <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+              <!-- Sidebar toggle button -->
+              <button id="sidebar-toggler" class="sidebar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+
+              <span class="page-title">
+                nama halaman yang sedanng aktif
+              </span>
+              <div class="navbar-right ">
+
+                <!-- search form -->
+                <div class="search-form">
+                  <form action="index.html" method="get">
+                    <div class="input-group input-group-sm" id="input-group-search">
+                      <input type="text" autocomplete="off" name="query" id="search-input" class="form-control" placeholder="Search..." />
+                      <div class="input-group-append">
+                        <button class="btn" type="button">/</button>
+                      </div>
+                    </div>
+                  </form>
+                  <ul class="dropdown-menu dropdown-menu-search">
 
 
 

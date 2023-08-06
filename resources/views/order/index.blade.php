@@ -1,66 +1,63 @@
-{{-- <x-app-layout>
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    <div class="card">
-                        <div class="card-body ">
-                            <a href="{{ route('order.create') }}" class="btn btn-primary p-6">Order</a>
-                            <table class="table table-striped ">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">Nama</th>
-                                        <th scope="col">Harga</th>
-                                        <th scope="col">Jumlah</th>
-                                        <th scope="col">Total Harga</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $no = 1; ?>
-                                    @foreach ($orders as $order)
-                                        <tr>
-                                            <th scope="row">{{ $no }}</th>
-                                            <td>
-                                                @foreach ($order->OrderDetail as $nama)
-                                                    <li>{{ $nama->product->name }}</li>
-                                                @endforeach
-                                            </td>
-                                            <td>
-                                                @foreach ($order->OrderDetail as $harga)
-                                                    <li>{{ $harga->product->price }}</li>
-                                                @endforeach
-                                            </td>
-                                            <td>
-                                                @foreach ($order->OrderDetail as $qty)
-                                                    <li>{{ $qty->qty }}</li>
-                                                @endforeach
-                                            </td>
-                                            <td>
-                                                <?php $jumlahTotalBayar = 0; ?>
-                                                @foreach ($order->OrderDetail as $jumlah)
-                                                    <li>{{ $jumlah->harga }}</li>
-                                                    <?php $jumlahTotalBayar += $jumlah->harga; ?>
-                                                @endforeach
-                                            </td>
-                                        </tr>
-                                        <td colspan="4">Total Bayar :</td>
-                                        <td>{{ $jumlahTotalBayar }}</td>
-                                        <?php $no++; ?>
-                                    @endforeach
-
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-</x-app-layout> --}}
 
 @extends('layouts/app')
 @section('konten')
+
+
+<!-- Column Sizing -->
+<div class="card card-default">
+  <div class="card-header">
+    <h2>Pemesanan</h2>
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <h5>Makanan</h5>
+        <div class="form-row align-items-center">
+          <div class="col-3">
+            <label for="makanan">Pilih Makanan:</label>
+            <select class="form-control rounded-0 bg-light" id="makanan">
+              <option>Rawon</option>
+              <option>Pecel</option>
+              <option>Sop Buntut</option>
+              <option>Gudeg</option>
+              <option>Rendang</option>
+            </select>
+          </div>
+          <div class="col-1">
+            <label for="jumlah_makanan">Jumlah:</label>
+            <input type="number" class="form-control" id="jumlah_makanan">
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-secondary btn-pill mt-6">Tambahkan</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <h5>Minuman</h5>
+        <div class="form-row align-items-center">
+          <div class="col-3">
+            <label for="minuman">Pilih Minuman:</label>
+            <select class="form-control rounded-0 bg-light" id="minuman">
+              <option>Es Teh</option>
+              <option>Es Jeruk</option>
+              <option>Es Gud Day</option>
+              <option>Teh Anget</option>
+              <option>Kopi</option>
+            </select>
+          </div>
+          <div class="col-1">
+            <label for="jumlah_minuman">Jumlah:</label>
+            <input type="number" class="form-control" id="jumlah_minuman">
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-secondary btn-pill mt-6">Tambahkan</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
     <!-- Table Product -->
     <div class="row">
         <div class="col-12">
@@ -149,7 +146,6 @@
                                 </tr>
                             @endforeach
 
-                            {{-- <td>Coach Swagger</td>
               <td>24541</td>
               <td>27</td>
               <td>1</td>
