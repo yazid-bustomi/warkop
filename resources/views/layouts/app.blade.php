@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Dashboard</title>
+    <title>@yield('tittle')</title>
 
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Roboto" rel="stylesheet">
@@ -57,21 +57,21 @@
 
                         <li class="has-sub">
                             <a class="sidenav-item-link" href={{ route('order.index') }}>
-                                <i class="mdi mdi-image-filter-none"></i>
+                                <i class="mdi mdi-dlna"></i>
                                 <span class="nav-text">Order</span>
                             </a>
                         </li>
 
                         <li class="has-sub">
                             <a class="sidenav-item-link" href={{ route('admin.inv.index') }}>
-                                <i class="mdi mdi-image-filter-none"></i>
+                                <i class="mdi-open-source-initiative"></i>
                                 <span class="nav-text">Inventory</span>
                             </a>
                         </li>
 
                         <li class="has-sub">
                             <a class="sidenav-item-link" href={{ route('admin.product.index') }}>
-                                <i class="mdi mdi-image-filter-none"></i>
+                                <i class="mdi mdi-package-variant-closed"></i>
                                 <span class="nav-text">Product</span>
                             </a>
                         </li>
@@ -94,39 +94,9 @@
                     </button>
 
                     <span class="page-title"></span>
-
+                      <h3> @yield('header')</h3>
                     <div class="navbar-right ">
-
-                        <!-- search form -->
-                        <div class="search-form">
-                            <form action="index.html" method="get">
-                                <div class="input-group input-group-sm" id="input-group-search">
-                                    <input type="text" autocomplete="off" name="query" id="search-input"
-                                        class="form-control" placeholder="Search..." />
-                                    <div class="input-group-append">
-                                        <button class="btn" type="button">/</button>
-                                    </div>
-                                </div>
-                            </form>
-                            <ul class="dropdown-menu dropdown-menu-search">
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Morbi leo risus</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Dapibus ac facilisis in</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Porta ac consectetur ac</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Vestibulum at eros</a>
-                                </li>
-
-                            </ul>
-
-                        </div>
-
+                        
                         <ul class="nav navbar-nav">
                             <!-- User Account -->
                             <li class="dropdown user-menu">
@@ -138,7 +108,7 @@
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li>
                                         <a class="dropdown-link-item" href="user-profile.html">
-                                            <i class="mdi mdi-account-outline"></i>
+                                            <i class="mdi mdi-account-alert"></i>
                                             <span class="nav-text">My Profile</span>
                                         </a>
                                     </li>

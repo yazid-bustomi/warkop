@@ -1,10 +1,13 @@
 @extends('layouts/app')
+@section('tittle')
+    {{'pemesanan'}}
+@endsection
+@section('header')
+    {{'Pemesanan'}}
+@endsection
 @section('konten')
     <!-- Column Sizing -->
     <div class="card card-default">
-        <div class="card-header">
-            <h2>Pemesanan</h2>
-        </div>
         <div class="card-body">
             <form>
                 <div class="form-group">
