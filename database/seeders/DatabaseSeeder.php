@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             TokoSeeder::class,
+            ProductCategorySeeder::class,
             ProductSeeder::class,
             InventarisSeeder::class,
             InventoryHistorySeeder::class,
