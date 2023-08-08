@@ -34,7 +34,7 @@
         NProgress.start();
     </script>
 
-    
+
     <div class="wrapper">
 
         <!-- ====================================
@@ -151,8 +151,11 @@
                                     </li>
 
                                     <li class="dropdown-footer">
-                                        <a class="dropdown-link-item" href={{ url('logout') }}> <i
-                                                class="mdi mdi-logout"></i> Log Out </a>
+                                        <form action="{{ route('logout') }}" method="post">
+                                            @csrf
+                                            <a class="dropdown-link-item" href="{{ route('logout') }}"> 
+                                                <i class="mdi mdi-logout"></i> Log Out </a>
+                                        </form>
                                     </li>
                                 </ul>
                             </li>
