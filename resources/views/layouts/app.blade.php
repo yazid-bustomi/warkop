@@ -34,7 +34,7 @@
         NProgress.start();
     </script>
 
-    
+
     <div class="wrapper">
 
         <!-- ====================================
@@ -109,20 +109,26 @@
                                     <li>
                                         <a class="dropdown-link-item" href="user-profile.html">
                                             <i class="mdi mdi-account-alert"></i>
+
                                             <span class="nav-text">My Profile</span>
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a class="dropdown-link-item" href="user-account-settings.html">
+                                        <a class="dropdown-link-item" href="#">
                                             <i class="mdi mdi-settings"></i>
                                             <span class="nav-text">Account Setting</span>
                                         </a>
                                     </li>
 
                                     <li class="dropdown-footer">
-                                        <a class="dropdown-link-item" href={{ url('logout') }}> <i
-                                                class="mdi mdi-logout"></i> Log Out </a>
+                                        <form action="{{ route('logout') }}" method="post">
+                                            @csrf
+                                            <a class="dropdown-link-item" href="{{ route('logout') }}"> 
+                                                <i class="mdi mdi-logout"></i>
+                                            <button type="submit">Logout</button>
+                                            </a>
+                                        </form>
                                     </li>
                                 </ul>
                             </li>
