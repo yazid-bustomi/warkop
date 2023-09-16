@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('tittle')
+    {{'dashboard'}}
+@endsection
+@section('header')
+    {{'Dashboard'}}
+@endsection
 @section('konten')
     <!-- Top Statistics -->
     <div class="row">
@@ -22,8 +28,6 @@
           </div>
         </div>
     </div>
-    
-
     <!-- Sales by Product -->
     <div class="card card-default">
         <div class="card-header align-items-center">

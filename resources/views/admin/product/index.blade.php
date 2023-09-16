@@ -1,4 +1,10 @@
 @extends('layouts/app')
+@section('tittle')
+    {{'Product'}}
+@endsection
+@section('header')
+    {{'Product'}}
+@endsection
 @section('konten')
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -8,7 +14,7 @@
                         <div class="card-body ">
                             <div class="row justify-content-between mr-5 ml-3">
 
-                                <div class="div h3">Product</div>
+                                
                                 <a href="{{ route('admin.product.create') }}" class="btn btn-primary mb-3 float-right">Tambah
                                     Product</a>
                             </div>
